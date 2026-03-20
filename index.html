@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Math Course</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">
+        <span class="logo-icon">∑</span>
+        <span class="logo-text">MathCourse</span>
+      </div>
+      <button class="close-btn" id="closeBtn">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+
+    <!-- User Profile -->
+    <div class="sidebar-profile">
+      <div class="avatar">
+        <i class="fa fa-user-graduate"></i>
+      </div>
+      <div class="profile-info">
+        <p class="profile-name">Étudiant</p>
+        <p class="profile-level">Niveau : Intermédiaire</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sidebar-nav">
+      <p class="nav-section-title">Apprentissage</p>
+
+      <a href="#" class="nav-item active" data-page="home">
+        <span class="nav-icon"><i class="fa fa-home"></i></span>
+        <span>Accueil</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="level">
+        <span class="nav-icon"><i class="fa fa-layer-group"></i></span>
+        <span>Choisir le Niveau</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="courses">
+        <span class="nav-icon"><i class="fa fa-book-open"></i></span>
+        <span>Mes Cours</span>
+        <span class="nav-badge">3</span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="progress">
+        <span class="nav-icon"><i class="fa fa-chart-line"></i></span>
+        <span>Ma Progression</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="exercises">
+        <span class="nav-icon"><i class="fa fa-pencil-alt"></i></span>
+        <span>Exercices</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <p class="nav-section-title">Application</p>
+
+      <a href="#" class="nav-item" data-page="settings">
+        <span class="nav-icon"><i class="fa fa-cog"></i></span>
+        <span>Paramètres</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="support">
+        <span class="nav-icon"><i class="fa fa-headset"></i></span>
+        <span>Contacter le Support</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="privacy">
+        <span class="nav-icon"><i class="fa fa-shield-alt"></i></span>
+        <span>Politique de Confidentialité</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+
+      <a href="#" class="nav-item" data-page="about">
+        <span class="nav-icon"><i class="fa fa-info-circle"></i></span>
+        <span>À Propos</span>
+        <span class="nav-arrow"><i class="fa fa-chevron-right"></i></span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>Version 1.0.0 &copy; 2026 MathCourse</p>
+    </div>
+  </aside>
+
+  <!-- MAIN APP -->
+  <div class="app-container">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn">
+        <span></span><span></span><span></span>
+      </button>
+      <h1 class="topbar-title">MATH COURSE</h1>
+      <button class="notif-btn">
+        <i class="fa fa-bell"></i>
+        <span class="notif-dot"></span>
+      </button>
+    </header>
+
+    <!-- PAGES WRAPPER -->
+    <main class="pages-wrapper">
+
+      <!-- PAGE: HOME -->
+      <section class="page active" id="page-home">
+
+        <!-- Hero / Intro -->
+        <div class="hero-section">
+          <div class="hero-image-wrapper">
+            <div class="hero-image">
+              <div class="hero-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+              </div>
+              <div class="math-symbols">
+                <span>π</span><span>∫</span><span>√</span>
+                <span>∑</span><span>∞</span><span>Δ</span>
+              </div>
+              <div class="hero-image-content">
+                <i class="fa fa-calculator hero-icon"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-text">
+            <span class="hero-tag">Bienvenue dans</span>
+            <h2 class="hero-title">Maîtrisez les <em>Mathématiques</em></h2>
+            <p class="hero-desc">
+              Explorez les concepts mathématiques essentiels avec des cours interactifs, 
+              des exercices progressifs et un suivi personnalisé de vos performances.
+            </p>
+            <button class="cta-btn" id="startBtn">
+              <span>Commencer maintenant</span>
+              <i class="fa fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Objectifs -->
+        <div class="objectives-section">
+          <h3 class="section-title">Objectifs du Cours</h3>
+          <div class="objectives-grid">
+            <div class="objective-card" style="--delay:0.1s">
+              <div class="obj-icon" style="--c:#f97316">
+                <i class="fa fa-brain"></i>
+              </div>
+              <h4>Comprendre</h4>
+              <p>Assimiler les fondements théoriques des mathématiques modernes</p>
+            </div>
+            <div class="objective-card" style="--delay:0.2s">
+              <div class="obj-icon" style="--c:#06b6d4">
+                <i class="fa fa-flask"></i>
+              </div>
+              <h4>Pratiquer</h4>
+              <p>Résoudre des exercices variés et progressifs</p>
+            </div>
+            <div class="objective-card" style="--delay:0.3s">
+              <div class="obj-icon" style="--c:#8b5cf6">
+                <i class="fa fa-trophy"></i>
+              </div>
+              <h4>Progresser</h4>
+              <p>Suivre votre évolution et valider vos acquis</p>
+            </div>
+            <div class="objective-card" style="--delay:0.4s">
+              <div class="obj-icon" style="--c:#10b981">
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>Exceller</h4>
+              <p>Atteindre l'excellence dans chaque domaine mathématique</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modules -->
+        <div class="modules-section">
+          <h3 class="section-title">Modules Disponibles</h3>
+          <div class="modules-list">
+            <div class="module-card">
+              <div class="module-icon" style="background: linear-gradient(135deg,#f97316,#ef4444)">
+                <i class="fa fa-superscript"></i>
+              </div>
+              <div class="module-info">
+                <h4>Algèbre</h4>
+                <p>12 leçons · Débutant</p>
+                <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+              </div>
+              <span class="module-pct">75%</span>
+            </div>
+            <div class="module-card">
+              <div class="module-icon" style="background: linear-gradient(135deg,#06b6d4,#3b82f6)">
+                <i class="fa fa-shapes"></i>
+              </div>
+              <div class="module-info">
+                <h4>Géométrie</h4>
+                <p>10 leçons · Intermédiaire</p>
+                <div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div>
+              </div>
+              <span class="module-pct">45%</span>
+            </div>
+            <div class="module-card">
+              <div class="module-icon" style="background: linear-gradient(135deg,#8b5cf6,#ec4899)">
+                <i class="fa fa-chart-area"></i>
+              </div>
+              <div class="module-info">
+                <h4>Analyse</h4>
+                <p>15 leçons · Avancé</p>
+                <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+              </div>
+              <span class="module-pct">20%</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- PAGE: CHOISIR LE NIVEAU -->
+      <section class="page" id="page-level">
+        <div class="page-inner">
+          <h2 class="page-heading">Choisir le Niveau</h2>
+          <p class="page-sub">Sélectionnez le niveau qui correspond à vos connaissances actuelles.</p>
+          <div class="level-cards">
+            <div class="level-card" data-level="debutant">
+              <div class="level-emoji">🌱</div>
+              <h3>Débutant</h3>
+              <p>Bases des opérations, fractions, notions de géométrie simple</p>
+              <button class="level-btn">Choisir</button>
+            </div>
+            <div class="level-card selected" data-level="intermediaire">
+              <div class="level-badge">Actuel</div>
+              <div class="level-emoji">📐</div>
+              <h3>Intermédiaire</h3>
+              <p>Algèbre, équations du second degré, trigonométrie</p>
+              <button class="level-btn">Choisir</button>
+            </div>
+            <div class="level-card" data-level="avance">
+              <div class="level-emoji">🚀</div>
+              <h3>Avancé</h3>
+              <p>Analyse, calcul intégral, probabilités et statistiques</p>
+              <button class="level-btn">Choisir</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE: PARAMÈTRES -->
+      <section class="page" id="page-settings">
+        <div class="page-inner">
+          <h2 class="page-heading">Paramètres</h2>
+          <div class="settings-list">
+            <div class="settings-group">
+              <p class="settings-group-title">Affichage</p>
+              <div class="setting-item">
+                <div class="setting-left">
+                  <i class="fa fa-moon"></i>
+                  <span>Mode sombre</span>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" id="darkToggle" />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="setting-item">
+                <div class="setting-left">
+                  <i class="fa fa-text-height"></i>
+                  <span>Taille du texte</span>
+                </div>
+                <select class="setting-select">
+                  <option>Petite</option>
+                  <option selected>Normale</option>
+                  <option>Grande</option>
+                </select>
+              </div>
+            </div>
+            <div class="settings-group">
+              <p class="settings-group-title">Notifications</p>
+              <div class="setting-item">
+                <div class="setting-left">
+                  <i class="fa fa-bell"></i>
+                  <span>Rappels de cours</span>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+              <div class="setting-item">
+                <div class="setting-left">
+                  <i class="fa fa-volume-up"></i>
+                  <span>Sons</span>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+            <div class="settings-group">
+              <p class="settings-group-title">Compte</p>
+              <div class="setting-item">
+                <div class="setting-left">
+                  <i class="fa fa-language"></i>
+                  <span>Langue</span>
+                </div>
+                <select class="setting-select">
+                  <option selected>Français</option>
+                  <option>English</option>
+                  <option>العربية</option>
+                </select>
+              </div>
+              <div class="setting-item danger">
+                <div class="setting-left">
+                  <i class="fa fa-trash"></i>
+                  <span>Réinitialiser la progression</span>
+                </div>
+                <i class="fa fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE: SUPPORT -->
+      <section class="page" id="page-support">
+        <div class="page-inner">
+          <h2 class="page-heading">Contacter le Support</h2>
+          <p class="page-sub">Une question ? Notre équipe vous répond rapidement.</p>
+          <div class="support-options">
+            <div class="support-card">
+              <i class="fa fa-envelope"></i>
+              <h4>Email</h4>
+              <p>support@mathcourse.app</p>
+            </div>
+            <div class="support-card">
+              <i class="fa fa-comments"></i>
+              <h4>Chat en direct</h4>
+              <p>Disponible 9h – 18h</p>
+            </div>
+            <div class="support-card">
+              <i class="fa fa-question-circle"></i>
+              <h4>FAQ</h4>
+              <p>Réponses aux questions fréquentes</p>
+            </div>
+          </div>
+          <div class="contact-form">
+            <textarea placeholder="Décrivez votre problème..."></textarea>
+            <button class="cta-btn">
+              <span>Envoyer</span>
+              <i class="fa fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE: CONFIDENTIALITÉ -->
+      <section class="page" id="page-privacy">
+        <div class="page-inner">
+          <h2 class="page-heading">Politique de Confidentialité</h2>
+          <div class="privacy-content">
+            <div class="privacy-block">
+              <h4><i class="fa fa-database"></i> Données collectées</h4>
+              <p>Nous collectons uniquement les données nécessaires à votre progression : nom, email, scores et historique d'exercices.</p>
+            </div>
+            <div class="privacy-block">
+              <h4><i class="fa fa-lock"></i> Sécurité</h4>
+              <p>Vos données sont chiffrées et stockées de manière sécurisée. Nous ne les partageons jamais avec des tiers sans votre consentement.</p>
+            </div>
+            <div class="privacy-block">
+              <h4><i class="fa fa-user-shield"></i> Vos droits</h4>
+              <p>Vous avez le droit d'accéder, de modifier ou de supprimer vos données à tout moment depuis les paramètres.</p>
+            </div>
+            <div class="privacy-block">
+              <h4><i class="fa fa-cookie-bite"></i> Cookies</h4>
+              <p>Nous utilisons des cookies fonctionnels pour améliorer votre expérience. Aucun cookie publicitaire n'est utilisé.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAGE: À PROPOS -->
+      <section class="page" id="page-about">
+        <div class="page-inner">
+          <h2 class="page-heading">À Propos</h2>
+          <div class="about-hero">
+            <div class="about-logo">∑</div>
+            <h3>MathCourse</h3>
+            <p>Version 1.0.0</p>
+          </div>
+          <p class="about-desc">MathCourse est une application éducative conçue pour rendre les mathématiques accessibles à tous, du lycéen au passionné adulte.</p>
+          <div class="about-stats">
+            <div class="stat"><span>10K+</span><p>Étudiants</p></div>
+            <div class="stat"><span>50+</span><p>Leçons</p></div>
+            <div class="stat"><span>4.8★</span><p>Note</p></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+      <a href="#" class="bottom-item active" data-page="home">
+        <i class="fa fa-home"></i><span>Accueil</span>
+      </a>
+      <a href="#" class="bottom-item" data-page="courses">
+        <i class="fa fa-book-open"></i><span>Cours</span>
+      </a>
+      <a href="#" class="bottom-item" data-page="exercises">
+        <i class="fa fa-pencil-alt"></i><span>Exercices</span>
+      </a>
+      <a href="#" class="bottom-item" data-page="progress">
+        <i class="fa fa-chart-line"></i><span>Progrès</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
